@@ -1,0 +1,150 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.circle {
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+.c1 { background: red; }
+.c2 { background: yellow; }
+.c3 { background: green; }
+
+.navbar {
+    background: #252526 !important;
+}
+
+.navbar-brand img {
+    height: 20px;
+}
+
+.nav-link {
+    color: #d4d4d4 !important;
+}
+
+.row {
+    display: flex;
+    height: 82vh;
+}
+
+.column-1 {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #333;
+    padding: 10px 0;
+}
+
+.column-1 i {
+    color: #ccc;
+    font-size: 20px;
+    margin: 15px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.column-2 {
+    width: 250px;
+    background: #252526;
+    /* padding: 10px; */
+}
+
+.column-3 {
+    width: calc(100% - 300px);
+    background: #1e1e1e;
+    /* padding: 10px; */
+}
+
+.explore {
+    font-weight: bold;
+    color: #d4d4d4;
+}
+
+.accordion-button {
+    background: #333;
+    color: #d4d4d4;
+}
+
+.accordion-body a {
+    display: block;
+    color: #d4d4d4;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.tabs {
+    display: flex;
+    background: #3a3ad0;
+    /* padding: 5px; */
+    overflow-x: auto;
+}
+
+.tab {
+    background: #333;
+    padding: 5px 10px;
+    /* margin-right: 5px; */
+    border-radius: 0;
+    cursor: pointer;
+}
+.tab:active{
+    border-top: 1px solid blue;
+    padding-top: 4px;
+    background: #555
+}
+.tab:hover{
+    color: #222;
+}
+
+.footer {
+    background: #252526;
+    padding: 10px;
+    text-align: center;
+    color: #d4d4d4;
+}
+
+.accordion-body{
+    background: #333;
+}
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+}
+nav {
+    background: #333;
+    padding: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+} */
+.pages {
+    margin-top: 20px;
+}
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+
+
+
+
