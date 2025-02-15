@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>VS Code Clone</title>
     <meta charset="utf-8">
@@ -8,13 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="vs-code-logo.png" height="" alt="VS Code Logo">
+                <img src="vs-code-logo.png" height="20" alt="VS Code Logo">
             </a>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="ul-nav-bar-links-container"> 
                 <li class="nav-item"><a class="nav-link" href="#">File</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Edit</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">View</a></li>
@@ -24,19 +26,50 @@
                 <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
             </ul>
             <span class="navbar-text d-flex">
-                <ul class="navbar-nav me-auto ml-5  mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto ml-5 mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active name" aria-current="page" href="#">Anil Vishwakarma - Visual Studio Code</a>
+                        <a id="nav-author-name" class="nav-link active name" aria-current="page" href="#">Anil Vishwakarma </a>
                     </li>
-                  </ul>   
+                </ul>
+            </span>
+            <span class="navbar-text d-flex">    
                 <div class="circle c1"></div>
                 <div class="circle c2"></div>
                 <div class="circle c3"></div>
             </span>
-        </div>
-    </nav>
+        </div> 
+        
+    </nav> -->
 
-    <div class="row">
+    <div class="nav d-flex justify-content-between align-items-center">
+        <div class="image"><img src="vs-code-logo.png" height="16" alt=""></div>
+        
+        <div class="nav-links">
+          <ul class="navbar-nav d-flex justify-content-center align-items-center flex-row" id="ul-nav-bar-links-container"> 
+            <li class="nav-item"><a class="nav-link" href="#">File</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Edit</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">View</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Go</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Run</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Terminal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+          </ul>
+        </div>
+      
+        <div id="nav-author-name" class='name'><a href="#">Anil Vishwakarma </a></div>
+      
+        <span class="navbar-exit-buttons d-flex">    
+          <div class="circle c1">1</div>
+          <div class="circle c2">2</div>
+          <div class="circle c3">3</div>
+        </span>  
+      </div>
+
+      
+
+
+
+    <div class="row p-0">
         <div class="column column-1">
             <div class="top d-flex flex-column">
                 <i class="fa-solid fa-file"></i>
@@ -64,13 +97,13 @@
                         </button>
                     </h2>
                     <div id="files" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <a href="#" class="list-group-item"><i class="fa-brands fa-react"></i> home.jsx</a>
-                            <a href="#" class="list-group-item"><i class="fa-brands fa-html5"></i> about.html</a>
-                            <a href="#" class="list-group-item"><i class="fa-brands fa-css3-alt"></i> contact.css</a>
-                            <a href="#" class="list-group-item"><i class="fa-brands fa-js"></i> projects.js</a>
-                            <a href="#" class="list-group-item"><i class="fa-solid fa-file-code"></i> articles.json</a>
-                            <a href="#" class="list-group-item"><i class="fa-brands fa-github"></i> github.md</a>
+                        <div class="accordion-body ">
+                            <a href="#" class="list-group-item page-link" data-target="home-page"><i class="fa-brands fa-react"></i> home.jsx</a>
+                            <a href="#" class="list-group-item page-link" data-target="about-page"><i class="fa-brands fa-html5"></i> about.html</a>
+                            <a href="#" class="list-group-item page-link" data-target="contact-page"><i class="fa-brands fa-css3-alt"></i> contact.css</a>
+                            <a href="#" class="list-group-item page-link" data-target="projects-page"><i class="fa-brands fa-js"></i> projects.js</a>
+                            <a href="#" class="list-group-item page-link" data-target="articles-page"><i class="fa-solid fa-file-code"></i> articles.json</a>
+                            <a href="#" class="list-group-item page-link" data-target="github-page"><i class="fa-brands fa-github"></i> github.md</a>
                         </div>
                     </div>
                 </div>
@@ -79,15 +112,195 @@
 
         <div class="column column-3">
             <div class="tabs d-flex">
-                <div class="tab"><i class="fa-brands fa-react"></i> home.jsx</div>
-                <div class="tab"><i class="fa-brands fa-html5"></i> about.html</div>
-                <div class="tab"><i class="fa-brands fa-css3-alt"></i> contact.css</div>
-                <div class="tab"><i class="fa-brands fa-js"></i> projects.js</div>
-                <div class="tab"><i class="fa-solid fa-file-code"></i> articles.json</div>
-                <div class="tab"><i class="fa-brands fa-github"></i> github.md</div>
+                <div class="tab" data-target="home-page"><i class="fa-brands fa-react"></i> home.jsx</div>
+                <div class="tab" data-target="about-page"><i class="fa-brands fa-html5"></i> about.html</div>
+                <div class="tab" data-target="contact-page"><i class="fa-brands fa-css3-alt"></i> contact.css</div>
+                <div class="tab" data-target="projects-page"><i class="fa-brands fa-js"></i> projects.js</div>
+                <div class="tab" data-target="articles-page"><i class="fa-solid fa-file-code"></i> articles.json</div>
+                <div class="tab" data-target="github-page"><i class="fa-brands fa-github"></i> github.md</div>
             </div>
-            <div class="pages " >
-                <div class="home-page"></div>
+            <div class="pages">
+                <div class="page active" id="home-page">
+                    <h1>Anil Vishwakarma</h1>
+                    <span class="iTyped"></span>
+                    <br>
+                    <button class="btn btn-primary rounded-0 mt-5">View Work</button>
+                    <button class="btn border-primary text-primary rounded-0 mt-5">Contact Me</button>
+                </div>
+                <div class="page" id="about-page">
+                    <h1>About Me</h1>
+                    <p>I am a web developer and designer. I have been working in this field for more than 2 years. I have worked on many projects and have a good experience in web development.</p>
+                </div>
+                <div class="page" id="contact-page">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-6 mb-4">
+                            <div class="social-media-links">
+                                <div class="links-objects">
+                                    <div>
+                                        <p><span>.socials</span> {</p>
+                                        <p>&nbsp;&nbsp;&nbsp;website: <a href="https://nitinranganath.me" target="_blank" rel="noopener">nitinranganath.me</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;email: <a href="mailto:nitinranganath@gmail.com" target="_blank" rel="noopener">nitinranganath@gmail.com</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;github: <a href="https://github.com/itsnitinr" target="_blank" rel="noopener">itsnitinr</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;linkedin: <a href="https://www.linkedin.com/in/nitinranganath/" target="_blank" rel="noopener">nitinranganath</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;twitter: <a href="https://www.twitter.com/iamnitinr" target="_blank" rel="noopener">iamnitinr</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;instagram: <a href="https://www.instagram.com/iamnitinr" target="_blank" rel="noopener">iamnitinr</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;polywork: <a href="https://www.polywork.com/nitinranganath" target="_blank" rel="noopener">nitinranganath</a>;</p>
+                                        <p>&nbsp;&nbsp;&nbsp;telegram: <a href="https://t.me/iamnitinr" target="_blank" rel="noopener">iamnitinr</a>;</p>
+                                        <p>&nbsp;&nbsp;codepen: <a href="https://codepen.io/itsnitinr" target="_blank" rel="noopener">nitinranganath</a>;</p>
+                                        <p>&nbsp;&nbsp;codesandbox: <a href="https://codesandbox.io/u/itsnitinr" target="_blank" rel="noopener">itsnitinr</a>;</p>
+                                        <p>}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-6">
+                            <div class="contact-form-container">
+                                <h2>or fill out this form</h2>
+                                <div class="contact-form">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput2">Name</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Message</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="message"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="projects-page">
+                    <div class="card-columns row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://t4.ftcdn.net/jpg/05/54/46/89/240_F_554468927_iwU3VYIjsaeopAb0WPYxVf21TloEhTEj.jpg" alt="Card image cap">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title text-white">DMart Console App</h5>
+                                    <p class="card-text text-white">A console-based application that simulates DMart's inventory and billing system using Node.js.</p>
+                                    <p class="card-text">
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Node.js</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Express</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">MongoDB</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">CLI</button>
+                                    </p>
+                                    <p class="card-text">
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0">Source Code</a>
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0 ms-3">Live Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://t4.ftcdn.net/jpg/05/54/46/89/240_F_554468927_iwU3VYIjsaeopAb0WPYxVf21TloEhTEj.jpg" alt="Card image cap">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title text-white">Weather App</h5>
+                                    <p class="card-text text-white">A web application that fetches real-time weather data from an API and displays temperature, humidity, and forecasts.</p>
+                                    <p class="card-text">
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">JavaScript</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Weather API</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Bootstrap</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Chart.js</button>
+                                    </p>
+                                    <p class="card-text">
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0">Source Code</a>
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0 ms-3">Live Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://t4.ftcdn.net/jpg/05/54/46/89/240_F_554468927_iwU3VYIjsaeopAb0WPYxVf21TloEhTEj.jpg" alt="Card image cap">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title text-white">VSCode Portfolio</h5>
+                                    <p class="card-text text-white">A developer-themed portfolio built with VSCode aesthetics, showcasing projects with interactive elements.</p>
+                                    <p class="card-text">
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">HTML</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">CSS</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">JavaScript</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">React</button>
+                                    </p>
+                                    <p class="card-text">
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0">Source Code</a>
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0 ms-3">Live Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="https://t4.ftcdn.net/jpg/05/54/46/89/240_F_554468927_iwU3VYIjsaeopAb0WPYxVf21TloEhTEj.jpg" alt="Card image cap">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title text-white">Task Manager App</h5>
+                                    <p class="card-text text-white">A cross-platform task manager built with Flutter that supports cloud sync, reminders, and offline mode.</p>
+                                    <p class="card-text">
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Flutter</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Dart</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Firebase</button>
+                                        <button class="btn border-primary border-2 rounded-5 text-white btn-sm">Redux</button>
+                                    </p>
+                                    <p class="card-text">
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0">Source Code</a>
+                                        <a href="#" class="text-white border-bottom border-3 border-warning text-decoration-none pb-0 ms-3">Live Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="github-page">
+                    <div class="card-body">
+                        <div class="card w-100">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="user-info text-align-center h-100">
+                                    <img src="images/fevicon.png" height="50" alt="">
+                                    <h5 class="card-title text-center">anilsjr</h5>
+                                </div>
+                                <div class="card-link border-start border-2 border-primary ps-2"><a href="#">30 repo</a></div>
+                                <div class="card-link border-start border-2 border-primary ps-2"><a href="#">2075 followers</a></div>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">GitHub Profile</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Developer Portfolio</h6>
+                                <p class="card-text">A profile showcasing repositories, followers, and contributions.</p>
+                                <a href="#" class="card-link">View Profile</a>
+                                <a href="#" class="card-link">Follow</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Weather App</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Live Weather Updates</h6>
+                                <p class="card-text">A real-time weather application that provides forecasts and temperature details.</p>
+                                <a href="#" class="card-link">View Project</a>
+                                <a href="#" class="card-link">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Task Manager</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Manage Your Tasks</h6>
+                                <p class="card-text">A simple and efficient task management tool for better productivity.</p>
+                                <a href="#" class="card-link">View Project</a>
+                                <a href="#" class="card-link">Source Code</a>
+                            </div>
+                        </div>
+
+
+
+
+
+
             </div>
         </div>
     </div>
@@ -99,5 +312,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/ityped.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
