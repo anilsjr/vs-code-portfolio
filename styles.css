@@ -206,6 +206,9 @@ html,body {
 .page {
     display: none;
 }
+#projects-page .card{
+    background-color: #252526;
+}
 
 .page.active {
     display: block;
